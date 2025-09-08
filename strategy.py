@@ -23,10 +23,10 @@ class BestStrategy:
     """
     Take if x > mu + sd*var_{r-1}
     """
-    COLLECT_PERCENT = 0.05
 
     def __init__(self, envelopes):
         self.envelopes = envelopes
+        self.COLLECT_PERCENT = 0.05
     
     def display(self):
         return "BestStrategy: Take if x > mu + sd*var_{r-1}"
