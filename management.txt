@@ -1,0 +1,12 @@
+stat_math.py:
+- get_sd(data: List[int])
+- get_varience(data: List[int])
+- get_average(data: List[int])
+
+envelope.py:
+- class envelope
+- - envelope.get_value() -> int
+- - envelope.keep() -> int
+- - envelope.toss_and_get_next() -> envelope (next)
+
+main_game_zvi.py
