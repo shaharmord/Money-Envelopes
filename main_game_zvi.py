@@ -11,7 +11,7 @@ strategies.append(ExampleStrategy(envelopes))                           # return
 strategies.append(Automatic_BaseStrategy(envelopes))                    # random selection of envelop
 strategies.append(N_max_strategy(envelopes))                            # return envelope after N max values (defualt N=3)
 strategies.append(More_then_N_percent_group_strategy(envelopes, 0.25))  # return envelope with more money that in the highest of N% group
-strategies.append(BestStrategy(envelopes))                              # best strategy
+strategies.append(Best_Solution(envelopes))                              # best strategy
 
 n=-1
 while n!=4:
