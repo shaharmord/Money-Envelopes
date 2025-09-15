@@ -4,14 +4,14 @@ class Envelope:
         self._next = next_envelope
         self._kept = False
     
-  def get_value():
+  def get_value(self):
     return self._value
 
-  def keep():
+  def keep(self):
     self._kept =True
     return self._value
 
-  def toss_and_get_next():
+  def toss_and_get_next(self):
     return self._next
   
     
