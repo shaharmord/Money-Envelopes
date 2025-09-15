@@ -85,13 +85,13 @@ class More_then_N_percent_group_strategy:
     def play(self):
         if self.envelopes:
             i=0
-            while (true):
+            while True:
                 if self.envelopes[i].get_value()>=125:
                     chosen = self.envelopes[i]
                     print(f"NMaxStrategy selected envelope with value: {chosen.get_value()}")
                     return
                 else
-                    i++
+                    i+=1
         else:
             print("No envelopes to choose from.")
             return
