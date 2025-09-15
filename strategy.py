@@ -20,7 +20,7 @@ class ExampleStrategy:
             print("No envelopes to choose from.")
 
 
-class Automatic_basestrategy:
+class Automatic_BaseStrategy:
     """
     chooses a random envelope.
     """
@@ -59,10 +59,10 @@ class N_max_strategy:
             while (i <= 4):
                 if self.envelopes[j].get_value()>=max:
                     max=self.envelopes[j].get_value()
-                    i++
-                    j++
+                    i+=1
+                    j+=1
                 else
-                    j++
+                    j+=1
                 
             chosen = self.envelopes[j]
             print(f"NMaxStrategy selected envelope with value: {chosen.get_value()}")
