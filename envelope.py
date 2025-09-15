@@ -1,5 +1,5 @@
 class Envelope:
-    def __init__(self, value: int, next_envelope=None):
+    def __init__(self, next_envelope=None):
         self._value = random.randint(1,1000)
         self._next = next_envelope
         self._kept = False
