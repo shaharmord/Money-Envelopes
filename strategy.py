@@ -19,7 +19,7 @@ class ExampleStrategy:
         else:
             print("No envelopes to choose from.")
 
-class Automatic_strategy:
+class Automatic_basestrategy:
     """
     chooses a random envelope.
     """
@@ -28,13 +28,13 @@ class Automatic_strategy:
         self.envelopes = envelopes
 
     def display(self):
-        return "Automatic Strategy: Pick a random envelope."
+        return "Automatic Base Strategy: Pick a random envelope."
 
     def play(self):
         if self.envelopes:
             i= random.randint(0, len(self.envelopes)-1)
             chosen = self.envelopes[i]
-            print(f"AutomaticStrategy selected envelope with value: {chosen.get_value()}")
+            print(f"AutomaticBaseStrategy selected envelope with value: {chosen.get_value()}")
         else:
             print("No envelopes to choose from.")
 
