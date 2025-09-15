@@ -19,6 +19,7 @@ class ExampleStrategy:
         else:
             print("No envelopes to choose from.")
 
+
 class Automatic_basestrategy:
     """
     chooses a random envelope.
@@ -35,6 +36,36 @@ class Automatic_basestrategy:
             i= random.randint(0, len(self.envelopes)-1)
             chosen = self.envelopes[i]
             print(f"AutomaticBaseStrategy selected envelope with value: {chosen.get_value()}")
+        else:
+            print("No envelopes to choose from.")
+
+
+class N_max_strategy:
+    """
+    chooses the 4th max-value envelope.
+    """
+
+    def __init__(self, envelopes):
+        self.envelopes = envelopes
+
+    def display(self):
+        return "N max strategy: Pick the 4th maximum value envelope."
+
+    def play(self):
+        if self.envelopes:
+            i=0
+            j=1
+            max=self.envelopes[0].get_value()
+            while (i <= 4):
+                if self.envelopes[j].get_value()>=max:
+                    max=self.envelopes[j].get_value()
+                    i++
+                    j++
+                else
+                    j++
+                
+            chosen = self.envelopes[j]
+            print(f"NMaxStrategy selected envelope with value: {chosen.get_value()}")
         else:
             print("No envelopes to choose from.")
 
