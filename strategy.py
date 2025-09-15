@@ -70,6 +70,34 @@ class N_max_strategy:
             print("No envelopes to choose from.")
 
 
+
+class More_then_N_percent_group_strategy:
+    """
+    chooses the first envelope with higher value than 125 (12.5% of max value).
+    """
+
+    def __init__(self, envelopes):
+        self.envelopes = envelopes
+
+    def display(self):
+        return "More than N percent group strategy: Pick the first envelope with higher value than 125 (12.5% of max value)."
+
+    def play(self):
+        if self.envelopes:
+            i=0
+            while (true):
+                if self.envelopes[i].get_value()>=125:
+                    chosen = self.envelopes[i]
+                    print(f"NMaxStrategy selected envelope with value: {chosen.get_value()}")
+                    return
+                else
+                    i++
+        else:
+            print("No envelopes to choose from.")
+            return
+
+
+
 class BestStrategy:
     """
     Take if x > mu + sd*var_{r-1}
