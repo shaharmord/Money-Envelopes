@@ -1,4 +1,5 @@
 import stat_math
+import random
 
 class ExampleStrategy:
     """
@@ -61,7 +62,7 @@ class N_max_strategy:
                     max=self.envelopes[j].get_value()
                     i+=1
                     j+=1
-                else
+                else:
                     j+=1
                 
             chosen = self.envelopes[j]
@@ -90,7 +91,7 @@ class More_then_N_percent_group_strategy:
                     chosen = self.envelopes[i]
                     print(f"NMaxStrategy selected envelope with value: {chosen.get_value()}")
                     return
-                else
+                else:
                     i+=1
         else:
             print("No envelopes to choose from.")
