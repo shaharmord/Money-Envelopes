@@ -19,6 +19,26 @@ class ExampleStrategy:
         else:
             print("No envelopes to choose from.")
 
+class Automatic_strategy:
+    """
+    chooses a random envelope.
+    """
+
+    def __init__(self, envelopes):
+        self.envelopes = envelopes
+
+    def display(self):
+        return "Automatic Strategy: Pick a random envelope."
+
+    def play(self):
+        if self.envelopes:
+            i= random.randint(0, len(self.envelopes)-1)
+            chosen = self.envelopes[i]
+            print(f"AutomaticStrategy selected envelope with value: {chosen.get_value()}")
+        else:
+            print("No envelopes to choose from.")
+
+
 class BestStrategy:
     """
     Take if x > mu + sd*var_{r-1}
