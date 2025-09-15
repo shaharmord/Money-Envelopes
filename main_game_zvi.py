@@ -1,5 +1,5 @@
 from envelope import Envelope
-from strategy import BestStrategy, ExampleStrategy, Automatic_BaseStrategy, N_max_strategy, More_then_N_percent_group_strategy
+from strategy import Best_Solution, ExampleStrategy, Automatic_BaseStrategy, N_max_strategy, More_then_N_percent_group_strategy
 
 def cls(): print ("\n" * 20)
 
@@ -25,7 +25,7 @@ while n!=4:
             N = input(f'enter N max values: ')
             strategies[n].N=int(N)
         elif n==3:
-            p = input(f'enter 0-1 number for group size (defualt=0.25)')
+            p = float(input(f'enter 0-1 number for group size (defualt=0.25)'))
             strategies[n].percent=p
         if n!=4:    
             strategies[n].play()
