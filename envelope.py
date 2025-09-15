@@ -5,13 +5,13 @@ class Envelope:
         self._kept = False
     
   def get_value():
-    return self._value()
+    return self._value
 
   def keep():
     self._kept =True
-    return self._value()
+    return self._value
 
   def toss_and_get_next():
-    return self._next()
+    return self._next
   
     
